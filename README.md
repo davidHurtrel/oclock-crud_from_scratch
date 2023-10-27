@@ -21,6 +21,7 @@ Créer les éléments suivants :
 - src/
     - Controller/
         - CoreController.php
+        - ErrorController.php
     - Entity/
         - CoreEntity.php
     - Util/
@@ -88,6 +89,7 @@ DB_PASS=''
 
 ## MISE EN PLACE DES ROUTES
 
+Dans config/routes.php :
 ```PHP
 $router->map(
     'GET',
@@ -99,3 +101,14 @@ $router->map(
     'home'
 );
 ```
+
+## MISE EN PLACE DU CODE GÉNÉRIQUE
+
+- src/Controller/CoreController.php
+- src/Controller/ErrorController.php
+- src/Entity/Entity.php
+- public/index.php
+- templates/_partials/head.tpl.php
+- templates/_partials/nav.tpl.php
+- templates/layout/footer.tpl.php
+- templates/layout/header.tpl.php
