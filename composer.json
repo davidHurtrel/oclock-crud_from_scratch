@@ -12,5 +12,9 @@
             "email": "david.hurtrel@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/var-dumper": "^6.3",
+        "altorouter/altorouter": "^2.0",
+        "benoclock/alto-dispatcher": "^1.3"
+    }
 }

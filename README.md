@@ -26,3 +26,23 @@ Créer les éléments suivants :
     - Util/
         - Database.php
 - templates/
+
+## INSTALLATION DES DÉPENDANCES
+
+### ROUTER
+
+```SH
+composer require altorouter/altorouter
+```
+
+### DISPATCHER
+
+```SH
+composer require benoclock/alto-dispatcher
+```
+
+### VAR-DUMPER
+
+```SH
+composer require symfony/var-dumper
+```
