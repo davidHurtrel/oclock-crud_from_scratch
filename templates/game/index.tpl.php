@@ -24,7 +24,7 @@
                             <td><?= number_format($game->getPrice(), 2, ',', ' ') ?> €</td>
                             <td>
                                 <a href="<?= $router->generate('game-update', ['id' => $game->getId()]) ?>"><i class="bi bi-pencil-square"></i></a>
-                                <a href="#" class="text-danger"><i class="bi bi-trash"></i></a>    
+                                <a href="<?= $router->generate('game-delete', ['id' => $game->getId()]) ?>" class="text-danger"><i class="bi bi-trash"></i></a>    
                             </td>
                         </tr>
                     <?php endforeach ?>

@@ -146,6 +146,14 @@ class Game extends Entity
 
     public function delete()
     {
-
+        $pdo = Database::getPDO();
+        $sql = "DELETE FROM `game` WHERE `id`=:id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':id', $this->getId(), PDO::PARAM_STR);
+        $stmt->execute();
+        if ($stmt->rowCount() === 1) {
+            return true;
+        }
+        return false;
     }
 }

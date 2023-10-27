@@ -42,7 +42,15 @@ $router->map(
     ],
     'game-update'
 );
-// $router->map('GET', '/game/delete/[i:id]', ['method' => 'delete', 'controller' => GameController::class], 'game-delete');
+$router->map(
+    'GET',
+    '/game/delete/[i:id]',
+    [
+        'method' => 'delete',
+        'controller' => GameController::class
+    ],
+    'game-delete'
+);
 
 // USER
 // $router->map('GET', '/users', ['method' => 'index', 'controller' => UserController::class], 'user-index');

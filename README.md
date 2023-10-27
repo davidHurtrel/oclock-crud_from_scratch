@@ -147,3 +147,10 @@ $router->map(
 - gérer l'envoi en POST
 - traiter les données récupérées dans le controller
 - gérer le save() avec la méthode update() dans le model
+
+## GAME DELETE
+
+- décommenter la route
+- ajouter le lien sur les boutons de la liste
+- créer la méthode dans le controller
+- gérer la méthode delete() dans le model

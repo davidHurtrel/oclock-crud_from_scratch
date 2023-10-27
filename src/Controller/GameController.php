@@ -67,4 +67,14 @@ class GameController extends CoreController
             ]);
         }
     }
+
+    /**
+     * @param int $id
+     */
+    public function delete(int $id)
+    {
+        $game = Game::find($id);
+        $game->delete();
+        header('Location: ' . $this->router->generate('game-index'));
+    }
 }
