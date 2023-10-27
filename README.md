@@ -117,3 +117,12 @@ $router->map(
 
 - src/Controller/HomeController.php
 - templates/home/index.php
+- templates/_partials/nav.tpl.php
+
+### GAME INDEX
+
+- décommenter la route
+- ajouter le lien dans la nav
+- mettre en place le Model
+- gérer la route dans le controller
+- gérer l'intégration dans le template

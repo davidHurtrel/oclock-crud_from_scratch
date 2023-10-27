@@ -10,7 +10,7 @@
                     <a class="nav-link" href="<?= $router->generate('home') ?>">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Jeux</a>
+                    <a class="nav-link" href="<?= $router->generate('game-index') ?>">Jeux</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Utilisateurs</a>

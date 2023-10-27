@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : ven. 27 oct. 2023 à 08:30
+-- Généré le : ven. 27 oct. 2023 à 09:33
 -- Version du serveur : 5.7.39
 -- Version de PHP : 8.2.0
 
@@ -59,17 +59,19 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` varchar(20) NOT NULL
+  `role` varchar(20) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `password`, `role`) VALUES
-(1, 'a@a.a', 'AAaa@@11', 'ROLE_SUPER_ADMIN'),
-(2, 'b@b.b', 'BBbb&&22', 'ROLE_ADMIN'),
-(3, 'c@c.c', 'CCccéé33', 'ROLE_USER');
+INSERT INTO `user` (`id`, `email`, `password`, `role`, `created_at`, `updated_at`) VALUES
+(1, 'a@a.a', 'AAaa@@11', 'ROLE_SUPER_ADMIN', '2023-10-27 11:33:02', NULL),
+(2, 'b@b.b', 'BBbb&&22', 'ROLE_ADMIN', '2023-10-27 11:33:02', NULL),
+(3, 'c@c.c', 'CCccéé33', 'ROLE_USER', '2023-10-27 11:33:02', NULL);
 
 --
 -- Index pour les tables déchargées

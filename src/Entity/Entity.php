@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-abstract class CoreModel
+abstract class Entity
 {
     protected $id;
     protected string $created_at;

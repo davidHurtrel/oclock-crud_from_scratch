@@ -1,14 +1,29 @@
 <?php
 
-// use GameController;
-// use UserController;
+use App\Controller\GameController;
 use App\Controller\HomeController;
 
 // HOME
-$router->map('GET', '/', ['method' => 'index', 'controller' => HomeController::class], 'home');
+$router->map(
+    'GET',
+    '/',
+    [
+        'method' => 'index',
+        'controller' => HomeController::class
+    ],
+    'home'
+);
 
 // GAME
-// $router->map('GET', '/games', ['method' => 'index', 'controller' => GameController::class], 'game-index');
+$router->map(
+    'GET',
+    '/games',
+    [
+        'method' => 'index',
+        'controller' => GameController::class
+    ],
+    'game-index'
+);
 // $router->map('GET', '/game/create', ['method' => 'create', 'controller' => GameController::class], 'game-create');
 // $router->map('GET', '/game/update/[i:id]', ['method' => 'update', 'controller' => GameController::class], 'game-update');
 // $router->map('GET', '/game/delete/[i:id]', ['method' => 'delete', 'controller' => GameController::class], 'game-delete');
