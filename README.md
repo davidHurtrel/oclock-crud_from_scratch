@@ -119,7 +119,9 @@ $router->map(
 - templates/home/index.php
 - templates/_partials/nav.tpl.php
 
-### GAME INDEX
+## GESTION DES JEUX
+
+### game index
 
 - décommenter la route
 - ajouter le lien dans la nav
@@ -127,7 +129,7 @@ $router->map(
 - créer la méthode dans le controller
 - gérer l'intégration dans le template associé
 
-### GAME CREATE
+### game create
 
 - décommenter la route
 - ajouter le lien sur la bouton de la liste
@@ -137,7 +139,7 @@ $router->map(
 - traiter les données récupérées dans le controller
 - gérer le save() avec la méthode create() dans le model
 
-### GAME UPDATE
+### game update
 
 - décommenter la route
 - ajouter le lien sur les boutons de la liste
@@ -148,7 +150,7 @@ $router->map(
 - traiter les données récupérées dans le controller
 - gérer le save() avec la méthode update() dans le model
 
-### GAME DELETE
+### game delete
 
 - décommenter la route
 - ajouter le lien sur les boutons de la liste
