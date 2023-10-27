@@ -1,9 +1,11 @@
-<div class="container">
+<div class="container-fluid bg-light text-center">
     <div class="row py-3">
         <div class="col-12">
-            <h1 class="float-start">Connexion</h1>
+            <h1>Connexion</h1>
         </div>
     </div>
+</div>
+<div class="container">
     <div class="row py-3">
         <div class="col-12">
             <form action="" method="POST">
