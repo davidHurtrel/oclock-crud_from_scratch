@@ -46,3 +46,29 @@ composer require benoclock/alto-dispatcher
 ```SH
 composer require symfony/var-dumper
 ```
+
+## MISE EN PLACE DES FICHIERS SPÉCIFIQUES À L'APPLICATION
+
+### Controllers
+
+- src/Controller/CoreController.php
+- src/Controller/GameController.php
+- src/Controller/HomeController.php
+- src/Controller/UserController.php
+
+### Entities
+
+- src/Entity/Entity.php
+- src/Entity/Game.php
+- src/Entity/User.php
+
+### Templates
+
+- templates/game/form.php
+- templates/game/index.php
+- templates/game/show.php
+- templates/home/form.php
+- templates/security/login.php
+- templates/user/form.php
+- templates/user/index.php
+- templates/user/show.php
