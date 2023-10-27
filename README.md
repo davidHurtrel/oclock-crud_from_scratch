@@ -166,3 +166,18 @@ $router->map(
 - implémenter le model User (attributs, getters, setters)
 - implémenter la vue (liste)
 - ajouter le lien dans la nav
+
+### user create
+
+- décommenter la route
+- implémenter le controller
+- implémenter le model User (attributs, getters, setters)
+- implémenter la vue (formulaire)
+- ajouter le lien dans la liste
+
+## security
+
+- décommenter les routes login et logout
+- implémenter le SecurityController
+- implémenter la vue (login)
+- ajouter le lien dans la nav

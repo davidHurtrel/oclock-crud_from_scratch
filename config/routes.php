@@ -3,6 +3,7 @@
 use App\Controller\GameController;
 use App\Controller\HomeController;
 use App\Controller\UserController;
+use App\Controller\SecurityController;
 
 // HOME
 $router->map(
@@ -93,7 +94,7 @@ $router->map(
 
 // SECURITY
 $router->map(
-    'GET',
+    'GET, POST',
     '/login',
     [
         'method' => 'login',
