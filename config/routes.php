@@ -63,10 +63,50 @@ $router->map(
     ],
     'user-index'
 );
-// $router->map('GET', '/user/create', ['method' => 'create', 'controller' => UserController::class], 'user-create');
-// $router->map('GET', '/user/update/[i:id]', ['method' => 'update', 'controller' => UserController::class], 'user-update');
-// $router->map('GET', '/user/delete/[i:id]', ['method' => 'delete', 'controller' => UserController::class], 'user-delete');
+$router->map(
+    'GET, POST',
+    '/user/create',
+    [
+        'method' => 'create',
+        'controller' => UserController::class
+    ],
+    'user-create'
+);
+// $router->map(
+//     'GET',
+//     '/user/update/[i:id]',
+//     [
+//         'method' => 'update',
+//         'controller' => UserController::class
+//     ],
+//     'user-update'
+// );
+// $router->map(
+//     'GET',
+//     '/user/delete/[i:id]',
+//     [
+//         'method' => 'delete',
+//         'controller' => UserController::class
+//     ],
+//     'user-delete'
+// );
 
 // SECURITY
-// $router->map('GET', '/login', ['method' => 'login', 'controller' => SecurityController::class], 'login');
-// $router->map('GET', '/logout', ['method' => 'logout', 'controller' => SecurityController::class], 'logout');
+$router->map(
+    'GET',
+    '/login',
+    [
+        'method' => 'login',
+        'controller' => SecurityController::class
+    ],
+    'login'
+);
+$router->map(
+    'GET',
+    '/logout',
+    [
+        'method' => 'logout',
+        'controller' => SecurityController::class
+    ],
+    'logout'
+);

@@ -31,7 +31,7 @@
     </div>
     <div class="row py-3">
         <div class="col-12 text-end">
-            <a href="#" class="btn btn-sm btn-primary">Nouveau</a>
+            <a href="<?= $router->generate('user-create') ?>" class="btn btn-sm btn-primary">Nouveau</a>
         </div>
     </div>
 </div>

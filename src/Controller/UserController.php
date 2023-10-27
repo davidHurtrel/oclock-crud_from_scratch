@@ -21,7 +21,24 @@ class UserController extends CoreController
      */
     public function create(): void
     {
-        
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+            $password = filter_input(INPUT_POST, 'password');
+            $role = filter_input(INPUT_POST, 'role');
+
+            $user = new User();
+            $user->setEmail($email);
+            $user->setPassword(password_hash($password, PASSWORD_BCRYPT));
+            $user->setRole($role);
+            if ($user->save()) {
+                header('Location: ' . $this->router->generate('user-index'));
+                exit;
+            } else {
+                dd('problème lors de la création');
+            }
+        } else {
+            $this->show('user/form');
+        }
     }
 
     /**

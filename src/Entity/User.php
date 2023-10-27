@@ -92,9 +92,36 @@ class User extends Entity
         return $user;
     }
 
+    /**
+     * @param string $email
+     * @return User
+     */
+    public static function findByEmail(string $email): User
+    {
+        $pdo = Database::getPDO();
+        $sql = 'SELECT * FROM `user` WHERE `email`=:email';
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':email', $email, \PDO::PARAM_STR);
+        $stmt->execute();
+        $user = $stmt->fetchObject(User::class);
+        return $user;
+    }
+
     public function create()
     {
-
+        $pdo = Database::getPDO();
+        $sql = "INSERT INTO `user` (`email`, `password`, `role`, `created_at`) VALUES (:email, :password, :role, NOW())";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':email', $this->getEmail(), PDO::PARAM_STR);
+        $stmt->bindValue(':password', $this->getPassword(), PDO::PARAM_STR);
+        $stmt->bindValue(':role', $this->getRole(), PDO::PARAM_STR);
+        
+        $stmt->execute();
+        if ($stmt->rowCount() === 1) {
+            $this->id = $pdo->lastInsertId();
+            return true;
+        }
+        return false;
     }
 
     public function update()
