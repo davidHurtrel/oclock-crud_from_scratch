@@ -54,6 +54,7 @@ composer require symfony/var-dumper
 - src/Controller/CoreController.php
 - src/Controller/GameController.php
 - src/Controller/HomeController.php
+- src/Controller/SecurityController.php
 - src/Controller/UserController.php
 
 ### Entities
@@ -83,4 +84,18 @@ DB_HOST=''
 DB_NAME=''
 DB_USER=''
 DB_PASS=''
+```
+
+## MISE EN PLACE DES ROUTES
+
+```PHP
+$router->map(
+    'GET',
+    '/',
+    [
+        'method' => 'index',
+        'controller' => HomeController::class
+    ],
+    'home'
+);
 ```
