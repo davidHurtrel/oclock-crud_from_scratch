@@ -97,7 +97,10 @@ class Game extends Entity
         return $games;
     }
 
-    public static function find(int $id)
+    /**
+     * @return Game
+     */
+    public static function find(int $id): Game
     {
         $pdo = Database::getPDO();
         $sql = 'SELECT * FROM `game` WHERE `id`=:id';
@@ -109,7 +112,10 @@ class Game extends Entity
         return $game;
     }
 
-    public function create()
+    /**
+     * @return bool
+     */
+    public function create(): bool
     {
         $pdo = Database::getPDO();
         $sql = "INSERT INTO `game` (`name`, `description`, `img`, `price`, `created_at`) VALUES (:name, :description, :img, :price, NOW())";
@@ -126,7 +132,10 @@ class Game extends Entity
         return false;
     }
 
-    public function update()
+    /**
+     * @return bool
+     */
+    public function update(): bool
     {
         $pdo = Database::getPDO();
         $sql = "UPDATE `game` SET `name`=:name, `description`=:description, `img`=:img, `price`=:price, `updated_at`=NOW() WHERE `id`=:id";
@@ -144,6 +153,9 @@ class Game extends Entity
         return false;
     }
 
+    /**
+     * @return bool
+     */
     public function delete()
     {
         $pdo = Database::getPDO();
