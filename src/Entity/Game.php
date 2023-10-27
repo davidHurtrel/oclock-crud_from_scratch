@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use PDO;
 use App\Utils\Database;
 
 class Game extends Entity
@@ -103,7 +104,19 @@ class Game extends Entity
 
     public function create()
     {
-
+        $pdo = Database::getPDO();
+        $sql = "INSERT INTO `game` (`name`, `description`, `img`, `price`, `created_at`) VALUES (:name, :description, :img, :price, NOW())";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':name', $this->getName(), PDO::PARAM_STR);
+        $stmt->bindValue(':description', $this->getDescription(), PDO::PARAM_STR);
+        $stmt->bindValue(':img', $this->getImg(), PDO::PARAM_STR);
+        $stmt->bindValue(':price', $this->getPrice());
+        $stmt->execute();
+        if ($stmt->rowCount() === 1) {
+            $this->id = $pdo->lastInsertId();
+            return true;
+        }
+        return false;
     }
 
     public function update()

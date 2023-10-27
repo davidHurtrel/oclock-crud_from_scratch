@@ -124,5 +124,15 @@ $router->map(
 - décommenter la route
 - ajouter le lien dans la nav
 - mettre en place le Model
-- gérer la route dans le controller
-- gérer l'intégration dans le template
+- créer la méthode dans le controller
+- gérer l'intégration dans le template associé
+
+## GAME CREATE
+
+- décommenter la route
+- ajouter le lien sur la bouton de la liste
+- créer la méthode dans le controller
+- gérer l'intégration dans le template associé
+- gérer l'envoi en POST
+- traiter les données récupérées dans le controller
+- gérer le save() avec la méthode create() dans le model

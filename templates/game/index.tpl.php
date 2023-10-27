@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row py-3">
         <div class="col-12">
             <h1 class="float-start">Liste des jeux</h1>
         </div>
@@ -32,9 +32,9 @@
             </table>
         </div>
     </div>
-    <div class="row">
+    <div class="row py-3">
         <div class="col-12 text-end">
-            <a href="#" class="btn btn-sm btn-primary">Nouveau</a>
+            <a href="<?= $router->generate('game-create') ?>" class="btn btn-sm btn-primary">Nouveau</a>
         </div>
     </div>
 </div>
