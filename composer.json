@@ -1,0 +1,16 @@
+{
+    "name": "davidhurtrel/s06e08-revision",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "davidHurtrel",
+            "email": "david.hurtrel@gmail.com"
+        }
+    ],
+    "require": {}
+}
