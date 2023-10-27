@@ -30,19 +30,19 @@ Créer les éléments suivants :
 
 ## INSTALLATION DES DÉPENDANCES
 
-### ROUTER
+### router
 
 ```SH
 composer require altorouter/altorouter
 ```
 
-### DISPATCHER
+### dispatcher
 
 ```SH
 composer require benoclock/alto-dispatcher
 ```
 
-### VAR-DUMPER
+### var-dumper
 
 ```SH
 composer require symfony/var-dumper
@@ -156,3 +156,13 @@ $router->map(
 - ajouter le lien sur les boutons de la liste
 - créer la méthode dans le controller
 - gérer la méthode delete() dans le model
+
+## AUTHENTIFICATION
+
+### user index
+
+- décommenter la route
+- implémenter le controller
+- implémenter le model User (attributs, getters, setters)
+- implémenter la vue (liste)
+- ajouter le lien dans la nav

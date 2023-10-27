@@ -93,7 +93,6 @@ class Game extends Entity
         $sql = 'SELECT * FROM `game`';
         $stmt = $pdo->query($sql);
         $games = $stmt->fetchAll(PDO::FETCH_CLASS, 'App\Entity\Game');
-
         return $games;
     }
 
@@ -108,7 +107,6 @@ class Game extends Entity
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         $game = $stmt->fetchObject(Game::class);
-
         return $game;
     }
 

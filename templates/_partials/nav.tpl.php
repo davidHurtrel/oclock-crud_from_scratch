@@ -13,7 +13,7 @@
                     <a class="nav-link" href="<?= $router->generate('game-index') ?>">Jeux</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Utilisateurs</a>
+                    <a class="nav-link" href="<?= $router->generate('user-index') ?>">Utilisateurs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Connexion</a>

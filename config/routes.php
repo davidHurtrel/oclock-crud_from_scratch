@@ -2,6 +2,7 @@
 
 use App\Controller\GameController;
 use App\Controller\HomeController;
+use App\Controller\UserController;
 
 // HOME
 $router->map(
@@ -53,7 +54,15 @@ $router->map(
 );
 
 // USER
-// $router->map('GET', '/users', ['method' => 'index', 'controller' => UserController::class], 'user-index');
+$router->map(
+    'GET',
+    '/users',
+    [
+        'method' => 'index',
+        'controller' => UserController::class
+    ],
+    'user-index'
+);
 // $router->map('GET', '/user/create', ['method' => 'create', 'controller' => UserController::class], 'user-create');
 // $router->map('GET', '/user/update/[i:id]', ['method' => 'update', 'controller' => UserController::class], 'user-update');
 // $router->map('GET', '/user/delete/[i:id]', ['method' => 'delete', 'controller' => UserController::class], 'user-delete');
