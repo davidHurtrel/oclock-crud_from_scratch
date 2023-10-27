@@ -127,7 +127,7 @@ $router->map(
 - créer la méthode dans le controller
 - gérer l'intégration dans le template associé
 
-## GAME CREATE
+### GAME CREATE
 
 - décommenter la route
 - ajouter le lien sur la bouton de la liste
@@ -137,7 +137,7 @@ $router->map(
 - traiter les données récupérées dans le controller
 - gérer le save() avec la méthode create() dans le model
 
-## GAME UPDATE
+### GAME UPDATE
 
 - décommenter la route
 - ajouter le lien sur les boutons de la liste
@@ -148,7 +148,7 @@ $router->map(
 - traiter les données récupérées dans le controller
 - gérer le save() avec la méthode update() dans le model
 
-## GAME DELETE
+### GAME DELETE
 
 - décommenter la route
 - ajouter le lien sur les boutons de la liste
