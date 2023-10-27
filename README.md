@@ -175,9 +175,15 @@ $router->map(
 - implémenter la vue (formulaire)
 - ajouter le lien dans la liste
 
-## security
+### login - logout
 
 - décommenter les routes login et logout
 - implémenter le SecurityController
 - implémenter la vue (login)
-- ajouter le lien dans la nav
+- ajouter le lien dans la nav (connexion - déconnexion)
+
+### acl
+
+- créer le fichier config/acl.php
+- implémenter `CoreController::checkAuthorization()`
+- ajouter la vérification dans le constructeur

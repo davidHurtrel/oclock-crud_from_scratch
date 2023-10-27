@@ -11,6 +11,31 @@ abstract class CoreController
     {
         $this->router = $router;
         $this->match = $match;
+
+        require __DIR__ . '/../../config/acl.php';
+        if ($match && array_key_exists($match['name'], $acl)) {
+            $authorizedRoles = $acl[$match['name']];
+            $this->checkAuthorization($authorizedRoles);
+        }
+    }
+
+    /**
+     * @param array $authorizedRoles
+     * @return bool
+     */
+    public function checkAuthorization(array $authorizedRoles = []): bool
+    {
+        if (array_key_exists('user', $_SESSION)) {
+            $user = $_SESSION['user'];
+            if (in_array($user->getRole(), $authorizedRoles)) {
+                return true;
+            } else {
+                dd('403 : Forbidden');
+            }
+        } else {
+            header('Location: ' . $this->router->generate('login'));
+            exit;
+        }
     }
 
     /**

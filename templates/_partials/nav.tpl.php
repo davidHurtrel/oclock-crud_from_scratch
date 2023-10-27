@@ -16,7 +16,11 @@
                     <a class="nav-link" href="<?= $router->generate('user-index') ?>">Utilisateurs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Connexion</a>
+                    <?php if (isset($_SESSION['user'])): ?>
+                        <a class="nav-link" href="<?= $router->generate('logout') ?>">Déconnexion</a>
+                    <?php else: ?>
+                        <a class="nav-link" href="<?= $router->generate('login') ?>">Connexion</a>
+                    <?php endif ?>
                 </li>
             </ul>
         </div>
