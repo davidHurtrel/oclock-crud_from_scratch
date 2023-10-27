@@ -136,3 +136,14 @@ $router->map(
 - gérer l'envoi en POST
 - traiter les données récupérées dans le controller
 - gérer le save() avec la méthode create() dans le model
+
+## GAME UPDATE
+
+- décommenter la route
+- ajouter le lien sur les boutons de la liste
+- créer la méthode dans le controller
+- implémenter la méthode find($id) dans le model
+- mettre à jour le template en préremplissant les champs
+- gérer l'envoi en POST
+- traiter les données récupérées dans le controller
+- gérer le save() avec la méthode update() dans le model

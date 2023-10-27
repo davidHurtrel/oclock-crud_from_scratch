@@ -33,7 +33,15 @@ $router->map(
     ],
     'game-create'
 );
-// $router->map('GET', '/game/update/[i:id]', ['method' => 'update', 'controller' => GameController::class], 'game-update');
+$router->map(
+    'GET, POST',
+    '/game/update/[i:id]',
+    [
+        'method' => 'update',
+        'controller' => GameController::class
+    ],
+    'game-update'
+);
 // $router->map('GET', '/game/delete/[i:id]', ['method' => 'delete', 'controller' => GameController::class], 'game-delete');
 
 // USER

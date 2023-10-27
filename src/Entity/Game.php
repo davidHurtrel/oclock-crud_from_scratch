@@ -91,15 +91,22 @@ class Game extends Entity
     {
         $pdo = Database::getPDO();
         $sql = 'SELECT * FROM `game`';
-        $pdoStatement = $pdo->query($sql);
-        $results = $pdoStatement->fetchAll(\PDO::FETCH_CLASS, 'App\Entity\Game');
+        $stmt = $pdo->query($sql);
+        $games = $stmt->fetchAll(PDO::FETCH_CLASS, 'App\Entity\Game');
 
-        return $results;
+        return $games;
     }
 
     public static function find(int $id)
     {
-        
+        $pdo = Database::getPDO();
+        $sql = 'SELECT * FROM `game` WHERE `id`=:id';
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $game = $stmt->fetchObject(Game::class);
+
+        return $game;
     }
 
     public function create()
@@ -121,7 +128,20 @@ class Game extends Entity
 
     public function update()
     {
-        
+        $pdo = Database::getPDO();
+        $sql = "UPDATE `game` SET `name`=:name, `description`=:description, `img`=:img, `price`=:price, `updated_at`=NOW() WHERE `id`=:id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':name', $this->getName(), PDO::PARAM_STR);
+        $stmt->bindValue(':description', $this->getDescription(), PDO::PARAM_STR);
+        $stmt->bindValue(':img', $this->getImg(), PDO::PARAM_STR);
+        $stmt->bindValue(':price', $this->getPrice());
+        $stmt->bindValue(':id', $this->getId(), PDO::PARAM_INT);
+        $stmt->execute();
+        if ($stmt->rowCount() === 1) {
+            $this->id = $pdo->lastInsertId();
+            return true;
+        }
+        return false;
     }
 
     public function delete()

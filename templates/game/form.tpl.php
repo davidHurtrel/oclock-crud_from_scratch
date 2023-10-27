@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row py-3">
         <div class="col-12">
-            <h1 class="float-start">Créer un jeu</h1>
+            <h1 class="float-start"><?= isset($game) ? 'Modifier' : 'Créer' ?> un jeu</h1>
         </div>
     </div>
     <div class="row py-3">
@@ -10,21 +10,21 @@
                 <div class="row mb-3">
                     <div class="col-3 offset-2">
                         <label for="name" class="form-label">Nom</label>
-                        <input type="text" name="name" placeholder="Ex.: Smallword" class="form-control" required>
+                        <input type="text" name="name" placeholder="Ex.: Smallword" class="form-control" value="<?= isset($game) ? $game->getName() : null ?>" required>
                     </div>
                     <div class="col-3">
                         <label for="img" class="form-label">Image</label>
-                        <input type="text" name="img" placeholder="Ex.: https://site.com/image.png" class="form-control" required>
+                        <input type="text" name="img" placeholder="Ex.: https://site.com/image.png" class="form-control" value="<?= isset($game) ? $game->getImg() : null ?>" required>
                     </div>
                     <div class="col-2">
                         <label for="price" class="form-label">Prix (en €)</label>
-                        <input type="number" name="price" placeholder="Ex.: 12,34" class="form-control" min="0" step="0.01" required>
+                        <input type="number" name="price" placeholder="Ex.: 12,34" class="form-control" min="0" step="0.01" value="<?= isset($game) ? $game->getPrice() : null ?>" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-8 offset-2">
                         <label for="description" class="form-label">Description</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control"></textarea>
+                        <textarea name="description" id="" cols="30" rows="10" class="form-control"><?= isset($game) ? $game->getDescription() : null ?></textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
