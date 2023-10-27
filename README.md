@@ -72,3 +72,15 @@ composer require symfony/var-dumper
 - templates/user/form.php
 - templates/user/index.php
 - templates/user/show.php
+
+## CONFIGURATION DE LA BASE DE DONNÉES
+
+- src/Utils/Database.php
+- config/config.ini :
+```INI
+;DATABASE
+DB_HOST=''
+DB_NAME=''
+DB_USER=''
+DB_PASS=''
+```
