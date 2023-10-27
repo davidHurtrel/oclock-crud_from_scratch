@@ -66,14 +66,14 @@ composer require symfony/var-dumper
 
 ### Templates
 
-- templates/game/form.php
-- templates/game/index.php
-- templates/game/show.php
-- templates/home/form.php
-- templates/security/login.php
-- templates/user/form.php
-- templates/user/index.php
-- templates/user/show.php
+- templates/game/form.tpl.php
+- templates/game/index.tpl.php
+- templates/game/show.tpl.php
+- templates/home/form.tpl.php
+- templates/security/login.tpl.php
+- templates/user/form.tpl.php
+- templates/user/index.tpl.php
+- templates/user/show.tpl.php
 
 ## CONFIGURATION DE LA BASE DE DONNÉES
 
@@ -112,3 +112,8 @@ $router->map(
 - templates/_partials/nav.tpl.php
 - templates/layout/footer.tpl.php
 - templates/layout/header.tpl.php
+
+## MISE EN PLACE DE LA PAGE D'ACCUEIL
+
+- src/Controller/HomeController.php
+- templates/home/index.php
